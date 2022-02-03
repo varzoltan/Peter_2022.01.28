@@ -42,10 +42,39 @@ namespace Peter_2022._01._28
             //120 = 2 * 2 * 2 * 15
             Console.Write("Kérem adjon meg  egy egész számot: ");
             int oszto = int.Parse(Console.ReadLine());
+            Console.Write(oszto + " = ");
             while(oszto % 2 == 0)
             {
-                
+                oszto = oszto / 2;
+                Console.Write("2*");
             }
+            Console.Write(oszto);
+
+            //24.feladat: Írj programot, ami csak az "alma" szót hajlandó beolvasni, ha ez sikerült, akkor
+            //kiírja, hogy az "Az alma gyümölcs!".
+            Console.WriteLine();
+            string szo;
+            do
+            {
+                Console.Write("Kérem adjon meg egy szót: ");
+                szo = Console.ReadLine();
+            }  while  (!szo.Equals("alma") && !szo.Equals("ALMA"));
+            Console.WriteLine($"Az {szo} gyümölcs!");
+
+            //25.feladat: Írj programot, ami beolvas egy egész számot, majd addig von ki belőle 3-at, amíg
+            //háromnál kisebb nem lesz az eredmény. Írja ki ezek után a hárommal való maradékos osztását a számnak.Például:
+            //16=5*3+1
+            Console.WriteLine();
+            Console.Write("Kérem adjon meg egy számot: ");
+            int szam = int.Parse(Console.ReadLine());
+            int n = 0;
+            Console.Write(szam + " = ");
+            while (szam > 3)
+            {
+                szam = szam - 3;
+                n++;
+            }
+            Console.Write($"{n}*3+{szam}");
             Console.ReadKey();
         }
     }
